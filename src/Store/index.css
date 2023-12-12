@@ -1,0 +1,62 @@
+.btn-sage {
+    background-color: #9DC183;
+    color: white;
+}
+
+.sage{
+    color: #9DC183;
+}
+
+.nav-link {
+    font-size: 1.3rem;
+}
+
+.nav-link:active {
+    color: black;
+}
+
+.webdev-store {
+    font-size: 2rem;
+}
+
+.edit-profile-link {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2em; /* Adjust font size as needed */
+}
+
+.follow-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.followers {
+    flex: 0.5; /* Adjust the width as needed */
+    max-width: 200px; /* Set a maximum width if required */
+    margin-right: 20px;
+    border: 1px solid #ccc; /* Adding a border for visual separation */
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.following {
+    flex: 1;
+    margin-right: 20px;
+    border: 1px solid #ccc; /* Adding a border for visual separation */
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.followers ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.follow-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
