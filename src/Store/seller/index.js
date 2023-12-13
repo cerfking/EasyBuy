@@ -7,33 +7,9 @@ import {useNavigate, useParams} from "react-router-dom";
 import * as itemClient from "../products/itemClient"
 
 function Seller() {
-    const [products, setProducts] = useState([
-                                                 {
-                                                     _id: 1,
-                                                     name: "Product 1",
-                                                     description: "Description 1",
-                                                     price: 10.99,
-                                                     seller:"",
-                                                     images: ["url1", "url2"] // Placeholder image URLs
-                                                 },
-                                                 {
-                                                     _id: 2,
-                                                     name: "Product 2",
-                                                     description: "Description 2",
-                                                     price: 19.99,
-                                                     seller:"",
-                                                     images: ["url3", "url4"] // Placeholder image URLs
-                                                 },
-                                                 // Add more placeholder products here if needed
-                                             ]);
+    const [products, setProducts] = useState([]);
 
-    const [product, setProduct] = useState({
-                                               name: "",
-                                               description: "",
-                                               price: 0,
-                                                seller:"",
-                                               images: [] // Initialize empty array for image URLs
-                                           });
+    const [product, setProduct] = useState({});
     const { id } = useParams();
 
     const [account, setAccount] = useState(null);
@@ -51,7 +27,6 @@ function Seller() {
             const products = await itemClient.findItemByUser(username);
             setProducts(products.filter((product) => product !== null));
 
-            console.log(products);
         } catch (error) {
             console.error("Error finding products:", error);
         }
@@ -97,9 +72,8 @@ function Seller() {
         // Your select product logic goes here
         console.log("select product")
         try {
-            const p = await itemClient.findItemById(product._id);
-            console.log(p.name);
-            setProduct(p);
+            //const p = await itemClient.findItemById(product._id);
+            setProduct(product);
         } catch (err) {
             console.log(err);
         }
@@ -156,7 +130,7 @@ function Seller() {
                             <input type="number" value={product.price} onChange={(e) => setProduct({ ...product, price: e.target.value })}/>
                         </td>
                         <td>
-                            <input value={product.images.join(", ")} onChange={(e) => setProduct({ ...product, images: e.target.value.split(", ") })}/>
+                            <input value={product.images ? product.images.join(", ") : ""} onChange={(e) => setProduct({ ...product, images: e.target.value.split(", ") })}/>
                         </td>
                         <td className="text-nowrap">
                             <button className="btn btn-secondary me-1" onClick={() => updateProduct()}>
@@ -173,14 +147,14 @@ function Seller() {
                         <tr key={product._id}>
                             <td>{product.name}</td>
                             <td>{product.description}</td>
-                            <td>${product.price}</td>
+                            <td>{product.price}</td>
                             <td>{product.images.join(", ")}</td>
                             <td>
                                 <button className="btn btn-danger me-2" onClick={() => deleteProduct(product)}>
                                     <BsTrash3Fill /> Delete
                                 </button>
-                                <button className="btn btn-warning me-2">
-                                    <BsPencil onClick={() => selectProduct(product)} /> Edit
+                                <button className="btn btn-warning me-2" onClick={() => selectProduct(product)}>
+                                    <BsPencil  /> Edit
                                 </button>
                             </td>
                         </tr>

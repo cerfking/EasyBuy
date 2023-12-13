@@ -16,6 +16,8 @@ import Admin from "./Store/admin";
 import Seller from "./Store/seller";
 import Product from "./Store/products/product";
 import OtherProfile from "./Store/account/otherProfile";
+import OnlineProducts from "./Store/onlineSearch";
+import OnlineProduct from "./Store/onlineSearch/onlineProduct";
 
 const AV = require("leancloud-storage");
 const { Query, User } = AV;
@@ -37,6 +39,8 @@ function App() {
                 <Routes>
                     <Route path="/" element={<StoreFront/>}/>
                     <Route path="/Home" element={<Home/>}/>
+                    <Route path="/OnlineProducts" element={<OnlineProducts/>}/>
+                    <Route path="/OnlineProducts/OnlineProduct/:shopId/:id" element={<OnlineProduct/>}/>
                     <Route path="/Products" element={<Products/>}/>
                     <Route path="/Products/Product/:id" element={<Product/>} />
                     <Route path="/Cart" element={<ShoppingCart/>}/>

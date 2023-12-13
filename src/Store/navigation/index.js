@@ -10,6 +10,7 @@ function Navigation() {
     const [links, setLinks] = useState([
         { label: 'Home', path: '/' },
         { label: 'Products', path: '/Products' },
+        { label: 'OnlineProducts', path: '/OnlineProducts' },
         { label: 'Following', path: '/Following' },
         { label: 'Profile', path: '/Profile' },
     ]);
