@@ -1,3 +1,4 @@
+## EasyBuy
 EasyBuy
 
 An application used to browse products in the online store, built with React, Redux, JavaScript, and CSS. It is published on Netlify: https://magnificent-treacle-96f77f.netlify.app/
