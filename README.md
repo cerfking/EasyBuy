@@ -5,7 +5,7 @@ An application used to browse products in the online store, built with React, Re
 
 ## Project Screen Shots
 
-![ScreenShots1](ScreenShots/ScreenShots1)
+![ScreenShots1](ScreenShots/ScreenShots1.png)
 
 [ PRETEND OTHER SCREEN SHOT IS HERE ]
 
