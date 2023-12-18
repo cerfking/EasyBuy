@@ -1,12 +1,10 @@
-<img width="1836" alt="ScreenShots1" src="https://github.com/cerfking/EasyBuy/assets/117816898/5823b818-cb26-4a59-86b3-ede7906abd1f">## EasyBuy
-
 EasyBuy
 
 An application used to browse products in the online store, built with React, Redux, JavaScript, and CSS. It is published on Netlify: https://magnificent-treacle-96f77f.netlify.app/
 
 ## Project Screen Shots
 
-![ScreenShots1](./ScreenShots/ScreenShots1)
+![ScreenShots1](ScreenShots/ScreenShots1)
 
 [ PRETEND OTHER SCREEN SHOT IS HERE ]
 
