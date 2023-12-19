@@ -33,7 +33,7 @@ To Visit App:
 
 ## Reflection
 
-This was a 3 week long project built during my 5800 Web Development class. Project goals included using technologies learned up until this point and familiarizing myself with documentation for new features.  
+This was a 3 week long project built during my 5610 Web Development class. Project goals included using technologies learned up until this point and familiarizing myself with documentation for new features.  
 
 Originally I wanted to build an application that allowed users to browse products data both from the mongoDB database and external API. I started this process by using the `create-react-app` boilerplate, then adding `react-router-4.0` and `redux`.  
 
